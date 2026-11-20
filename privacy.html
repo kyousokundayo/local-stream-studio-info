@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Local Stream Studio の YouTube 連携で読み取るデータ、その用途、Mac 上の保存期間、連携解除と権限撤回の方法です。">
+  <title>プライバシーポリシー | Local Stream Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">本文へ</a>
+  <header><div class="bar">
+    <a class="brand" href="index.html">Local Stream Studio</a>
+    <nav aria-label="サイト内"><a href="index.html">ホーム</a><a href="privacy.html" aria-current="page">プライバシー</a><a href="terms.html">利用規約</a></nav>
+  </div></header>
+  <main id="main">
+    <h1>プライバシーポリシー</h1>
+    <p class="lead">Local Stream Studio の YouTube 連携は、Mac 上のアプリから Google・YouTube に直接接続します。このページでは、連携すると何が読み取られ、どこに保存・送信されるかを説明します。</p>
+    <section>
+      <h2>連携で読み取る情報と用途</h2>
+      <dl>
+        <dt>チャンネルと認証情報</dt>
+        <dd>Google の画面で選んだチャンネルの ID と名前を、画面表示と操作先の照合に使います。Google が発行するアクセス用・更新用トークンは、その Mac の利用者専用ファイルに保存し、YouTube への認証と再接続に使います。パスワードは Google の画面で入力します。</dd>
+        <dt>配信枠と動画の指標</dt>
+        <dd>予約中・配信中・終了した枠の ID、タイトル、公開範囲、予定時刻、開始・終了時刻、配信状態を読み取り、枠の選択と履歴表示に使います。YouTube が提供する範囲で、チャンネル登録者数、動画の再生回数、高評価数、同時視聴者数を取得して表示します。</dd>
+        <dt>ライブチャット</dt>
+        <dd>対象の枠で受信したコメントの本文、投稿者の表示名・チャンネル ID、投稿・配信枠の ID、投稿時刻を、チャット表示と直近の参加状況の集計に使います。削除・撤回・利用停止の通知を受け取ると、該当するコメントを履歴から取り除きます。</dd>
+      </dl>
+    </section>
+    <section>
+      <h2>何をどこへ送るか</h2>
+      <p>本アプリは YouTube API Services を利用します。Google の同意画面に表示される YouTube 管理権限を使い、配信開始の操作に応じて、新規枠の作成または予約枠への接続、送信先の取得・紐付けを行います。Mac から選択した映像と音声を YouTube に送り、開始・終了時には対象の枠の状態を更新します。チャットの送信を実行すると、入力した本文を選択中の枠に投稿します。</p>
+      <p>コメント表示やエンドロールを使うと、投稿者名やコメントが配信映像や録画に映ることがあります。読み上げを使うと、読み上げるテキストを設定された音声合成エンジンに渡します。標準の接続先は同じ Mac の VOICEVOX です。外部のエンジンを指定した場合はその接続先にも送ります。</p>
+      <p>YouTube から得た情報は、ここに記載した利用者向けの配信・チャット・統計機能に使用します。認証情報やチャット履歴をアプリ運営者のサーバーに集める仕組みはありません。Twitch や Discord の任意連携は、それぞれ別に設定します。</p>
+    </section>
+    <section>
+      <h2>Mac に残る情報と保存期間</h2>
+      <p>認証情報と前回選んだ配信枠をチャンネルごとに保存します。追加したチャンネルは個別に選択でき、チャット履歴や統計もそのチャンネル単位で表示します。</p>
+      <p>チャット履歴の集計対象は、その Mac で受信した直近30日分です。アプリの起動時や履歴の処理時に期間を過ぎたレコードを整理します。録画ファイルは指定した保存先で利用者が管理し、映像に収録したコメントや音声はそのファイルに残ります。</p>
+    </section>
+    <section id="disconnect">
+      <h2>連携を解除し、データを削除する</h2>
+      <ol>
+        <li><strong>Mac 上の認証と履歴を消す。</strong> YouTube の配信・録画を停止し、「設定」→「YouTube連携」で対象チャンネルを選び、「このチャンネルの連携を解除」を実行します。そのチャンネルの認証情報・前回選択した枠・保存済みチャット履歴を削除します。複数の Mac で使った場合は各 Mac で操作してください。</li>
+        <li><strong>Google 側でアクセス権を取り消す。</strong> 連携に使った Google アカウントで「サードパーティとの接続」を開き、Local Stream Studio を選んで接続を削除します。<a href="https://myaccount.google.com/connections">Google アカウントの接続管理</a></li>
+      </ol>
+      <p>公開済みの配信や投稿は YouTube 側で管理します。公開範囲の変更や動画の削除は YouTube Studio、チャット投稿の削除は YouTube の対象チャットで操作してください。保存した録画は Mac の保存先から削除できます。</p>
+    </section>
+    <section id="contact">
+      <h2>ポリシーと問い合わせ先</h2>
+      <p>Google API から得た情報の使用・他のアプリへの転送には、Google API Services User Data Policy の Limited Use（利用の制限）要件が適用されます。Google・YouTube によるデータの取り扱いは Google のプライバシーポリシーで確認できます。</p>
+      <p class="resources"><a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a><a href="https://policies.google.com/privacy?hl=ja">Google プライバシーポリシー</a><a href="https://developers.google.com/youtube/terms/api-services-terms-of-service">YouTube API Services 利用規約</a></p>
+      <p>このアプリのデータ利用や削除については、Google の連携同意画面で Local Stream Studio のアプリ情報を開き、表示されるサポートメール宛てにお問い合わせください。</p>
+      <p>この案内サイトは GitHub Pages を使用しています。サイトへのアクセス時は、GitHub がセキュリティ目的で訪問者の IP アドレスを記録します。<a href="https://docs.github.com/ja/site-policy/privacy-policies/github-general-privacy-statement">GitHub プライバシーステートメント</a></p>
+    </section>
+  </main>
+</body>
+</html>
